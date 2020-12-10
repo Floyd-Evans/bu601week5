@@ -1,0 +1,19 @@
+{
+	"degrees": [{
+			"degree": {
+				"school": "Indiana Wesleyan University",
+				"program_major": "Business Information Systems",
+				"type": "BA",
+				"year_conferred": "2006"
+			}
+		},
+		{
+			"degree": {
+				"school": "Boston University - MET",
+				"program_major": "Software Development",
+				"type": "MS",
+				"year_conferred": "2021"
+			}
+		}
+	]
+}

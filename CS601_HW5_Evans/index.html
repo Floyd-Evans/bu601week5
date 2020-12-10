@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<!-- 
+ Display contents from a json file that is hosted on a server via javascript
+-->
+
+<head>
+  <meta charset="utf-8">
+
+  <title>MET CS 601 Floyd Evans - Home</title>
+  <meta name="description" content="CS601">
+  <meta name="author" content="Floyd Evans">
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="content"></div>
+
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+    var url = "https://floyd-evans.github.io/bu601week5/my_schooling.json";
+
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        display(myArr);
+      }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    function display(arr) {
+      var out = "";
+      var i;
+      for (i in arr.degrees) {
+        out += "<br>" + arr.degrees[i].degree.school + " | " + arr.degrees[i].degree.program_major +
+          arr.degrees[i].degree.type + " | " + arr.degrees[i].degree.year_conferred + "</br>";
+      }
+
+      document.getElementById("content").innerHTML = out;
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+body {
+  background-color: #f0f8ff;
+  width: calc(100% - 420px);
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  color: blue;
+}
+
+span {
+  clear: both;
+}
+
+.break {
+  font-size: .75em;
+  display: block;
+  color: red;
+}
+
+section {
+  text-align: center;
+  padding: 1em 15em;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  max-width: 1200px;
+}
+
+input.invalid {
+  border-color: #900;
+  background-color: #FDD;
+}
+
+input.valid {
+  border-color: rgba(6, 46, 1, 0.815);
+  background-color: rgba(188, 240, 158, 0.637);
+}
+
+.error {
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: rgb(246, 120, 120);
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
